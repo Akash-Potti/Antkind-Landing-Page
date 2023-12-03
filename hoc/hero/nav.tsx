@@ -1,9 +1,9 @@
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
 import Link from "next/link";
 
 const Navbar = () => {
     return (
-        <motion.div 
+        <motion.div
             initial={{
                 opacity: 0
             }}
@@ -20,16 +20,14 @@ const Navbar = () => {
                 <Link href="#about">
                     About
                 </Link>
-                <Link href="#services">
-                    Services
-                </Link>
                 <Link href="#team">
                     Team
                 </Link>
+
                 <Link href="#contact">
                     Contact
                 </Link>
-                
+
             </div>
         </motion.div>
     )

@@ -1,11 +1,11 @@
 "use client"
 import { Instrument_Serif } from "next/font/google"
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
 
 const is = Instrument_Serif({
-  weight: "400",
-  subsets: ["latin", "latin-ext"]
+    weight: "400",
+    subsets: ["latin", "latin-ext"]
 })
 
 const PHRASES = [
@@ -20,9 +20,9 @@ const PHRASES = [
 
 const Text1 = () => {
     const [isMobile, setIsMobile] = useState<boolean>(true);
-    useEffect(()=>{
+    useEffect(() => {
         function handleWindowSizeChange() {
-            setIsMobile(window.innerWidth <= 768);
+            setIsMobile(window.innerWidth <= 964);
         }
         handleWindowSizeChange()
 
@@ -37,10 +37,10 @@ const Text1 = () => {
     return (
         <div className={`${is.className} text-[#78290F]`}>
             <h1 className="text-4xl px-4 md:px-0 md:text-6xl">
-                {PHRASES.map((phrase, idx)=>(
+                {PHRASES.map((phrase, idx) => (
                     <motion.span
                         initial={{
-                            opacity:0.2,
+                            opacity: 0.2,
                         }}
                         whileInView={{
                             opacity: 1,

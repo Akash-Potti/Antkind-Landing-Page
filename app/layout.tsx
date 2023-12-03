@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import {Instrument_Serif} from "next/font/google"
+import { ParallaxProvider } from 'react-scroll-parallax';
+import ClientRootLayout from './_client';
 
 
 
@@ -16,10 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='min-w-[100vw] min-h-screen !overflow-x-hidden' style={{
-        backgroundColor: "rgb(255,236,209)",
-        background: "linear-gradient(180deg, rgba(255,236,209,1) 0%, rgba(201,255,188,1) 100%)",
-      }}>{children}</body>
+      <ClientRootLayout>
+        <body className='min-w-[100vw] min-h-screen !overflow-x-hidden' style={{
+          backgroundColor: "rgba(201,255,188,1)",
+          background: "linear-gradient(180deg, rgba(255,236,209,1) 0%, rgba(201,255,188,1) 100%)",
+        }}>{children}</body>
+      </ClientRootLayout>
     </html>
   )
 }

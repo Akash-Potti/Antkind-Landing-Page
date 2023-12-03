@@ -11,6 +11,9 @@ const config: Config = {
     extend: {
       colors: {
         background: "#FFECD1"
+      },
+      screens: {
+        md: "964px"
       }
     },
   },

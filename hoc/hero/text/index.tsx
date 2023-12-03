@@ -1,11 +1,12 @@
 "use client"
 import { Instrument_Serif } from "next/font/google"
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
+import { Parallax } from "react-scroll-parallax"
 
 const is = Instrument_Serif({
-  weight: "400",
-  subsets: ["latin", "latin-ext"]
+    weight: "400",
+    subsets: ["latin", "latin-ext"]
 })
 
 const PHRASES = [
@@ -24,9 +25,9 @@ const PHRASES = [
 
 const Text = () => {
     const [isMobile, setIsMobile] = useState<boolean>(true);
-    useEffect(()=>{
+    useEffect(() => {
         function handleWindowSizeChange() {
-            setIsMobile(window.innerWidth <= 768);
+            setIsMobile(window.innerWidth <= 964);
         }
         handleWindowSizeChange()
 
@@ -39,12 +40,12 @@ const Text = () => {
 
 
     return (
-        <div className={`${is.className} text-[#78290F]`}>
+        <Parallax speed={50} className={`${is.className} text-[#78290F]`}>
             <h1 className="text-6xl px-4 md:px-0 md:text-8xl">
-                {PHRASES.map((phrase, idx)=>(
+                {PHRASES.map((phrase, idx) => (
                     <motion.span
                         initial={{
-                            opacity:0.2,
+                            opacity: 0.2,
                         }}
                         whileInView={{
                             opacity: 1,
@@ -58,7 +59,7 @@ const Text = () => {
                     </motion.span>
                 ))}
             </h1>
-        </div>
+        </Parallax>
     )
 }
 
