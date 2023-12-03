@@ -5,13 +5,12 @@ import Navbar from "./nav"
 import { Parallax, ParallaxBanner } from "react-scroll-parallax"
 
 
-const SUBHEADING = ": CRAFTING STORIES THAT TRAVEL"
+const SUBHEADING = "CRAFTING STORIES THAT TRAVEL"
 
 const HeroSection = () => {
     return (
         <Parallax speed={-10} id="about">
-            <Navbar />
-            <div className={`py-24 w-full h-full flex flex-col items-center justify-center gap-2 `}>
+            <div className={`py-4 md:py-24 w-full h-full flex flex-col items-center justify-center gap-12`}>
                 <Heading />
                 <p className="text-xl  text-center md:text-7xl">
                     {SUBHEADING.split(" ").map((text, indx) => (

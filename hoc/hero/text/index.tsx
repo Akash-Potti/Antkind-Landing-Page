@@ -10,11 +10,6 @@ const PHRASES = [
     "marketing agency that ",
     "helps tell standout brand stories for climate ",
     "tech companies and conscious brands. ",
-    "Antkind is an ode ",
-    "to the superior ",
-    "work ethos practised ",
-    "in ant colonies. "
-
 ]
 
 const Text = () => {

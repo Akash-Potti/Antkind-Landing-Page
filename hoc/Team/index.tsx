@@ -4,14 +4,26 @@ import AntsHeading from "./heading"
 import Image from "next/image"
 import { Parallax } from "react-scroll-parallax"
 import { useEffect, useState } from "react"
+import { LinkedinLogo } from "@phosphor-icons/react"
+import Link from "next/link"
 
 const teamMembers = [
   {
-    name: "Mairu Gupta", role: "CEO", image: "/mairu.jpg", description: "A media & tech executive with 15 years of experience in scaling both corporate and early-stage companies across advertising, sports, music and blockchain. He was heading the media business for Sony Music & the NBA, and previously he also led business for advertising agencies such as Saatchi & Saatchi, Jack in the Box, SapientNitro, Young & Rubicam earlier in his career."
+    name: "Mairu Gupta", role: "CEO", image: "/mairu.jpeg",
+    linkedin: "https://www.linkedin.com/in/mairu"
   },
-  { name: "Ankita Rajurkar", role: "Business Lead", image: "/ankita.jpg" },
-  { name: "Nupur Prasad", role: "Content Lead", image: "/nupur.png" },
-  { name: "Sanyja Santiago", role: "Design Lead", image: "/Sanyja.jpg" }
+  {
+    name: "Ankita Rajurkar", role: "Business Lead", image: "/ankita.jpeg",
+    linkedin: "https://www.linkedin.com/in/ankitarajurkar/"
+  },
+  {
+    name: "Nupur Prasad", role: "Content Lead", image: "/nupur.jpeg",
+    linkedin: "https://www.linkedin.com/in/nupur-prasad-a9572048"
+  },
+  {
+    name: "Sanyja Santiago", role: "Design Lead", image: "/Sanyja.jpg",
+    linkedin: "https://www.linkedin.com/in/sanyja-santiago-85a76a58"
+  }
 ];
 
 const borderStyles = [
@@ -57,7 +69,7 @@ const Team = () => {
 
   return (
     <Parallax speed={25}>
-      <div className={`pt-24 w-full h-full flex flex-col items-center justify-center gap-2  `}>
+      <div className={`w-full h-full flex flex-col items-center justify-center gap-2`}>
         <AntsHeading />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-rows-2 gap-8 mt-8 h-full md:w-full">
           {teamMembers.map((member, idx) => (
@@ -79,10 +91,20 @@ const Team = () => {
                 delay: 0.5 + (0.2 * idx)
               }}
               className="bg-[#aaff96] rounded-xl md:rounded-none md:justify-start flex flex-col md:flex-row items-center justify-center md:h-56 overflow-hidden gap-4 pb-2">
-              <Image src={member.image} width={964} height={224} alt={member.name} className="w-full md:w-56 max-h-56" />
-              <h1 className="text-4xl font-semibold text-center">
-                {member.name}
-              </h1>
+              <Image src={member.image} width={964} height={964} alt={member.name} className="w-full md:w-64 max-h-64" />
+              <div className="flex flex-col gap-2 w-full h-full items-center justify-center md:items-start">
+                <h1 className="text-4xl font-semibold text-center">
+                  {member.name}
+                </h1>
+                <p className="text-sm font-semibold text-center">
+                  {member.role}
+                </p>
+                <div className="flex gap-2 items-center">
+                  <Link href={member.linkedin}>
+                    <LinkedinLogo size={32} weight="fill" />
+                  </Link>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
