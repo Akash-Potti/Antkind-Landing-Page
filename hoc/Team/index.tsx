@@ -10,7 +10,7 @@ import Link from "next/link"
 const teamMembers = [
   {
     name: "Mairu Gupta", role: "CEO", image: "/mairu.jpeg",
-    linkedin: "https://www.linkedin.com/in/mairu"
+    linkedin: "https://www.linkedin.com/in/mairu/"
   },
   {
     name: "Ankita Rajurkar", role: "Business Lead", image: "/ankita.jpeg",
@@ -18,11 +18,11 @@ const teamMembers = [
   },
   {
     name: "Nupur Prasad", role: "Content Lead", image: "/nupur.jpeg",
-    linkedin: "https://www.linkedin.com/in/nupur-prasad-a9572048"
+    linkedin: "https://www.linkedin.com/in/nupur-prasad-content/"
   },
   {
     name: "Sanyja Santiago", role: "Design Lead", image: "/Sanyja.jpg",
-    linkedin: "https://www.linkedin.com/in/sanyja-santiago-85a76a58"
+    linkedin: "https://www.linkedin.com/in/sanyja-santiago"
   }
 ];
 
