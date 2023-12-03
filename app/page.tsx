@@ -5,7 +5,6 @@ import Image from 'next/image'
 import WhySustainability from '@/hoc/Why-sustainability'
 import Text1 from '@/hoc/Why-sustainability/text'
 import Team from '@/hoc/Team'
-import Clients from '@/hoc/Our Clients'
 import ContactUs from '@/hoc/Contact'
 
 export default function Home() {

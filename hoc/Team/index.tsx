@@ -1,15 +1,9 @@
 "use client"
-import { Instrument_Serif } from "next/font/google"
 import { motion } from "framer-motion"
 import AntsHeading from "./heading"
 import Image from "next/image"
 import { Parallax } from "react-scroll-parallax"
 import { useEffect, useState } from "react"
-
-const is = Instrument_Serif({
-  weight: "400",
-  subsets: ["latin", "latin-ext"]
-})
 
 const teamMembers = [
   {
@@ -63,7 +57,7 @@ const Team = () => {
 
   return (
     <Parallax speed={25}>
-      <div className={`pt-24 w-full h-full flex flex-col items-center justify-center gap-2  ${is.className}`}>
+      <div className={`pt-24 w-full h-full flex flex-col items-center justify-center gap-2  `}>
         <AntsHeading />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-rows-2 gap-8 mt-8 h-full md:w-full">
           {teamMembers.map((member, idx) => (

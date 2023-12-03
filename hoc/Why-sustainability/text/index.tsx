@@ -1,12 +1,7 @@
 "use client"
-import { Instrument_Serif } from "next/font/google"
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
 
-const is = Instrument_Serif({
-    weight: "400",
-    subsets: ["latin", "latin-ext"]
-})
 
 const PHRASES = [
     "84% of global consumers consider ",
@@ -35,7 +30,7 @@ const Text1 = () => {
 
 
     return (
-        <div className={`${is.className} text-[#78290F]`}>
+        <div className={`text-[#78290F]`}>
             <h1 className="text-4xl px-4 md:px-0 md:text-6xl">
                 {PHRASES.map((phrase, idx) => (
                     <motion.span
