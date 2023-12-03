@@ -22,7 +22,7 @@ const teamMembers = [
   },
   {
     name: "Sanyja Santiago", role: "Design Lead", image: "/Sanyja.jpg",
-    linkedin: "https://www.linkedin.com/in/sanyja-santiago"
+    linkedin: "https://www.linkedin.com/in/sanyja-santiago-85a76a58/"
   }
 ];
 
