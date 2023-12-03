@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 import Team from '@/hoc/Team'
 import ContactUs from '@/hoc/Contact'
-
+import Footer from '@/hoc/footer/footer'
 export default function Home() {
   return (
     <div className='w-full h-full flex flex-col items-center justify-center'>
@@ -15,6 +15,7 @@ export default function Home() {
         <Text />
         <Team />
         <ContactUs />
+        <Footer />
       </div>
     </div>
   )
