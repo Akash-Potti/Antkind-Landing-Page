@@ -1,52 +1,17 @@
 "use client"
-import { motion } from "framer-motion"
-import { useEffect, useState } from "react"
-import { Parallax } from "react-scroll-parallax"
-
-const PHRASES = [
-    "Antkind is in the race ",
-    "between creativity and catastrophe. ",
-    "We’re a full-service digital ",
-    "marketing agency that ",
-    "helps tell standout brand stories for climate ",
-    "tech companies and conscious brands. ",
-]
+import Image from "next/image";
 
 const Text = () => {
-    const [isMobile, setIsMobile] = useState<boolean>(true);
-    useEffect(() => {
-        function handleWindowSizeChange() {
-            setIsMobile(window.innerWidth <= 964);
-        }
-        handleWindowSizeChange()
-
-        window.addEventListener('resize', handleWindowSizeChange);
-
-        return () => {
-            window.removeEventListener('resize', handleWindowSizeChange);
-        }
-    }, [])
-
-
     return (
-        <h1 className="text-6xl px-4 md:px-0 md:text-8xl text-[#78290F]">
-            {PHRASES.map((phrase, idx) => (
-                <motion.span
-                    initial={{
-                        opacity: 0.2,
-                    }}
-                    whileInView={{
-                        opacity: 1,
-                    }}
-                    transition={{
-                        duration: 0.2,
-                        delay: isMobile ? 0.2 * idx : 0.5
-                    }}
-                >
-                    {phrase}
-                </motion.span>
-            ))}
-        </h1>
+        <div className="flex w-full  text-text">
+            <div className="left-0 h-full w-full flex items-center md:flex-row flex-col gap-4">
+                <h1 className="text-2xl sm:text-4xl md:text-start text-center uppercase font-semibold md:!w-1/2 w-full">
+                    Antkind lives at the cusp of progress and peril.
+                    We are a digital marketing & business development collective of storytellers and growth hackers. We help tell standout brand stories and build scale for climate companies and conscious brands.
+                </h1>
+                <Image src="/static/1.jpg" width={750} height={750} alt="Solar panels" className="w-full md:w-1/2 rounded-3xl" />
+            </div>
+        </div>
     )
 }
 

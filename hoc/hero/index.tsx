@@ -1,17 +1,15 @@
 "use client"
 import { motion } from "framer-motion"
 import Heading from "./heading"
-import Navbar from "./nav"
-import { Parallax, ParallaxBanner } from "react-scroll-parallax"
 
 
-const SUBHEADING = "CRAFTING STORIES THAT TRAVEL"
+const SUBHEADING = "CRAFTING ''nn STORIES ''nn THAT TRAVEL."
 
 const HeroSection = () => {
     return (
-        <div className={`py-1 md:py-24 w-full h-full flex flex-col items-center justify-center gap-12`}>
+        <div className={`md:w-screen h-[45vh] md:h-[65vh] flex items-center justify-between flex-col pb-[5vh]`}>
             <Heading />
-            <p className="text-xl  text-center md:text-5xl">
+            <p className="text-6xl md:text-9xl text-center font-extrabold text-header">
                 {SUBHEADING.split(" ").map((text, indx) => (
                     <motion.span initial={{
                         opacity: 0,
@@ -25,7 +23,11 @@ const HeroSection = () => {
                             delay: 0.15 + (indx * 0.2)
                         }}
                     >
-                        {text} {' '}
+                        {text == "''nn" ? <br /> : (
+                            <>
+                                {text} {' '}
+                            </>
+                        )}
                     </motion.span>
                 ))}
             </p>

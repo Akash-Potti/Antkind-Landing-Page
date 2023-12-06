@@ -10,7 +10,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#FFECD1"
+        background: "#ffffff",
+        header: "#8c8c8c",
+        text: "#da291c"
       },
       screens: {
         md: "964px"

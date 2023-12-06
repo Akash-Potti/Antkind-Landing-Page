@@ -11,7 +11,7 @@ export default function Home() {
     <div className='w-full h-full flex flex-col items-center justify-center'>
       <HeroSection />
 
-      <div className='max-w-6xl px-4 lg:px-2 xl:px-0'>
+      <div className='max-w-7xl w-full px-4 lg:px-2 xl:px-0'>
         <Text />
         <Team />
         <ContactUs />
