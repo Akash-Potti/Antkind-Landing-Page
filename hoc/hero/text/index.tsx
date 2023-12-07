@@ -9,7 +9,7 @@ const Text = () => {
                     Antkind lives at the cusp of progress and peril.
                     We are a digital marketing & business development collective of storytellers and growth hackers. We help tell standout brand stories and build scale for climate companies and conscious brands.
                 </h1>
-                <Image src="/static/1.jpg" width={750} height={750} alt="Solar panels" className="w-full md:w-1/2 rounded-3xl" />
+                <Image src="/static/1.jpg" width={750} height={750} alt="Solar panels" className="w-full md:w-1/2 " />
             </div>
         </div>
     )
